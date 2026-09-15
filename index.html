@@ -7,21 +7,27 @@
 </head>
 <body>
     <h1>Welcome to Keenen Wilkins' Website</h1>
-    <p> I am an intern in cycle 7</p></p>
-</body>
-</html>
+    <p>I am an intern in cycle 7.</p>
 
-    <!-- Your existing HTML content goes here -->
+    <button id="magicButton" type="button">Play YouTube Video</button>
 
-    <button id="magicButton">Click Me!</button>
+    <iframe
+      id="ytPlayer"
+      src=""
+      width="560"
+      height="315"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
 
     <script>
       const button = document.getElementById('magicButton');
       const iframe = document.getElementById('ytPlayer');
+      const videoUrl = 'https://www.youtube.com/embed/Aq5WXmQQooo?autoplay=1&mute=1';
 
-      
       button.addEventListener('click', () => {
-        iframe.src += "?autoplay=1&mute=1";
+        iframe.src = videoUrl;
       });
     </script>
 </body>
